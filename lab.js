@@ -170,7 +170,6 @@ while(z > 0) {
   console.log('valeur de z', z)
   for (i = z; i > 0; i--) {
     console.log(i)
-
   }
   z = z - 1
 }
