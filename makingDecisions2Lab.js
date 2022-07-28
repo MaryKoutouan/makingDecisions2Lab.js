@@ -8,14 +8,16 @@ var arr = [10,20,30,40,50,60]
 
 //Code Here
 
-
+let firstItem = arr 
+console.log(firstItem)
 ////////// PROBLEM 2 //////////
 /*
   Remove the last item from the 'arr' array and store it in a variable named 'lastItemRemoved'. Console.log the array to verify you no longer have the last item.
 */
 
 //Code Here
-
+let lastItemRemoved = firstItem.pop()
+console.log(lastItemRemoved)
 ////////// PROBLEM 3 //////////
 
 // Do not edit the code below.
@@ -28,7 +30,9 @@ var family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
 
 //Code Here
 
-
+for (i = 0; i < family.length; i++) {
+  console.log(family[i])
+}
 
 ////////// PROBLEM 4 //////////
 
@@ -43,6 +47,12 @@ let evensArr = []
 
 //Code Here
 
+for (let i = 0; i < nums.length; i++) {
+  if (nums[i] % 2 === 0) {
+    evensArr.push(nums[i])
+    console.log(evensArr)
+  }
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -56,7 +66,17 @@ var score = 74
 */
 
 //Code Here
-
+if (score >= 90) {
+  console.log("A")
+  } else if (score >= 80) {
+    console.log("B")
+  } else if (score >= 70) {
+    console.log("C")
+  } else if (score >= 60) {
+    console.log("D")
+  } else {
+    console.log("F")
+  }
 
 ////////// Intermediate Problems //////////
 
@@ -72,14 +92,19 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
 
 //Code Here
 
-
+let someNum = myFavoriteNumbers.splice(4, 1, 0)
+console.log(someNum)
 ////////// PROBLEM 7 //////////
 
 // Subscripting (accessing values using their index) an array can fail. What happens if you subscript to the 7th element, but there are not 7 elements in the array? Let's write some code to check for that. 
 // Use an if statement to check the length of the 'myFavoriteNumbers' array. If it's less than 7, log 'There are not enough elements in this array' to the console. If the length is more than 7, reassign the value of 'someNum' to the value of the 7th element in the array. (Hint: how can you make sure that your code works for exactly 7 elements? What index do you use to get the 7th element?)
 
 //Code Here
-
+if (myFavoriteNumbers.length < 7) {
+  console.log("There are not enough elements in this array")
+} else {
+  someNum = myFavoriteNumbers.splice(4, 1, 0)
+}
 
 ////////// PROBLEM 8 //////////
 
@@ -90,7 +115,11 @@ var listOfNumbers = [1,2,3,4,5,6,7,8,9,10,11,12];
 // Use a for-loop to iterate through 'listOfNumbers', checking to see if each number is divisible by 3. If it is, console.log '{number} is divisible by 3.'
 
 //Code Here
-
+for (i = 0; i<listOfNumbers.length; i++) {
+  if (listOfNumbers[i] % 3 === 0) {
+    console.log("number is divisible by 3", listOfNumbers[i])
+  }
+}
 
 ////////// PROBLEM 9 //////////
 // Do not edit the code below.
@@ -103,7 +132,9 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 
 //Code Here
 
-
+for (i = letters.length-1 ; i >= 0; i--) {
+  console.log(letters[i])
+}
 ////////// Advanced Problems //////////
 
 ////////// PROBLEM 10 //////////
@@ -124,7 +155,30 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
+switch (letterGrade) {
+  case "A":
+    console.log("The student is doing excellently.")
+    break;
 
+  case "B" :
+    console.log("The student is doing well.");
+    break;
+  
+  case "C":
+    console.log("The student is doing alright.");
+    break;
+  
+  case "D":
+    console.log("The student is not doing very well.");
+    break;
+
+  case "F":
+    console.log("The student is failing.")  
+
+  default:
+    console.log("Not an eligible grade.")
+
+  } 
 
 
 ////////// PROBLEM 11 //////////
@@ -152,3 +206,15 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
+
+for(i = 1; i <= 100; i++) {
+  if( i % 5 === 0 && i % 3 === 0) {
+    console.log("Devmountain", i)
+  } else if (i % 5 === 0) {
+    console.log("montain", i)
+  } else if (i % 3 === 0) {
+    console.log("Dev", i)
+  } else if (i % 5 !==0 && i % 3 !== 0) {
+    console.log(i)
+  }
+}
